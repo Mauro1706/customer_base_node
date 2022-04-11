@@ -1,12 +1,13 @@
 {
-  "name": "customer_base_node",
+  "name": "m_backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "tsc -w",
-    "start": "node program.js"
+    "start": "node ./dist/program.js",
+    "swagger-autogen": "node swagger.js"
   },
   "keywords": [],
   "author": "",
