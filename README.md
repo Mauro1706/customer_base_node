@@ -1,5 +1,5 @@
 ## `Pré-requisitos para o sistema`
-#### `Instalr o MongoDB`
+#### `Instalar o MongoDB`
 
 ## `Intalando todas as dependencias`
 #### `npm install`
