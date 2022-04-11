@@ -1,5 +1,3 @@
-<p align="center"><a href="" target="_blank"><img src="" width="350"></a></p>
-
 ## `Pré-requisitos para o sistema`
 #### `Instalr o MongoDB`
 
