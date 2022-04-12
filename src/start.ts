@@ -63,8 +63,8 @@ class App {
         this.app.route('/api/v1/client/:id').get(ClientController.getById)
         this.app.route('/api/v1/client').post(ClientController.create)
         this.app.route('/api/v1/client/:id').put(ClientController.update)
-        this.app.route('/api/v1/client/disable/:id').delete(ClientController.disable)
-        this.app.route('/api/v1/client/action/:id/:action').delete(ClientController.chargeGrateful)
+        this.app.route('/api/v1/client/disable/:id').put(ClientController.disable)
+        this.app.route('/api/v1/client/action/:id/:action').put(ClientController.chargeGrateful)
 
         this.app.route('/api/v1/contract/status').get(ContractStatusController.get)
         this.app.route('/api/v1/contract/status/:id').get(ContractStatusController.getById)
