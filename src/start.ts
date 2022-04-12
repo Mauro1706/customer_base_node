@@ -62,6 +62,7 @@ class App {
         this.app.route('/api/v1/client/by/:status?').get(ClientController.getBy)
         this.app.route('/api/v1/client/:id').get(ClientController.getById)
         this.app.route('/api/v1/client').post(ClientController.create)
+        this.app.route('/api/v1/client/:id').delete(ClientController.delete)
         this.app.route('/api/v1/client/:id').put(ClientController.update)
         this.app.route('/api/v1/client/disable/:id').put(ClientController.disable)
         this.app.route('/api/v1/client/action/:id/:action').put(ClientController.chargeGrateful)

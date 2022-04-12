@@ -6,25 +6,28 @@ import Helper from "../helpers/helper";
 class ContractStatusController {
   get(req, res) {
     ContractStatusService.get()
-      .then((contractStatus) => Helper.sendResponse(res, HttpStatus.OK, contractStatus))
+      .then((contractStatus) => Helper.sendResponse(res, HttpStatus.OK, contractStatus, ""))
       .catch((error) => console.error.bind(console, `Error ${error}`));
   }
   getById(req, res) {
     const _id = req.params.id;
 
     ContractStatusService.getById(_id)
-      .then((contractStatus) => Helper.sendResponse(res, HttpStatus.OK, contractStatus))
+      .then((contractStatus) => Helper.sendResponse(res, HttpStatus.OK, contractStatus, ""))
       .catch((error) => console.error.bind(console, `Error ${error}`));
   }
   create(req, res) {
     let client = req.body;
+    const utils = { "url": req.protocol + '://' + req.get('host') + "/api/v1/contract/status" };
 
     ContractStatusService.create(client)
       .then((contractStatus) =>
         Helper.sendResponse(
           res,
-          HttpStatus.OK,
-          "Contract Status  registered successfully"
+          HttpStatus.CREATED,
+          "",
+          "Contract Status registered successfully",
+          utils
         )
       )
       .catch((error) => console.error.bind(console, `Error ${error}`));
@@ -38,6 +41,7 @@ class ContractStatusController {
         Helper.sendResponse(
           res,
           HttpStatus.OK,
+          "",
           `${contractStatus.value} successfully updated`
         )
       )
@@ -48,7 +52,7 @@ class ContractStatusController {
 
     ContractStatusService.delete(_id)
       .then(() =>
-        Helper.sendResponse(res, HttpStatus.OK, "Contract Status successfully deleted")
+        Helper.sendResponse(res, HttpStatus.OK, "", "Contract Status successfully deleted")
       )
       .catch((error) => console.error.bind(console, `Error ${error}`));
   }

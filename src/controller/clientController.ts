@@ -7,11 +7,13 @@ class ClientController {
   get(req, res) {
     let filter = req.body;
 
+    const url = require("url");
+
     const page = filter.page ? parseInt(filter.page) : 1;
     const perPage = filter.perPage ? parseInt(filter.perPage) : 10;
 
     ClientService.get(page, perPage)
-      .then((client) => Helper.sendResponse(res, HttpStatus.OK, client))
+      .then((client) => Helper.sendResponse(res, HttpStatus.OK, client, "", url))
       .catch((error) => console.error.bind(console, `Error ${error}`));
   }
 
@@ -40,13 +42,16 @@ class ClientController {
     let client = req.body;
 
     client.contractNumber =  Math.random() * 10000;
+    const utils = { "url": req.protocol + '://' + req.get('host') + "/api/v1/client" };
 
     ClientService.create(client)
       .then((client) =>
         Helper.sendResponse(
           res,
-          HttpStatus.OK,
-          "Client registered successfully"
+          HttpStatus.CREATED,
+          "",
+          "Client registered successfully",
+          utils
         )
       )
       .catch((error) => console.error.bind(console, `Error ${error}`));
@@ -61,6 +66,7 @@ class ClientController {
         Helper.sendResponse(
           res,
           HttpStatus.OK,
+          "",
           `${client.name} successfully updated`
         )
       )
@@ -76,7 +82,7 @@ class ClientController {
 
     ClientService.chargeGrateful(_id, queryText)
       .then(() =>
-        Helper.sendResponse(res, HttpStatus.OK, `${txtAction}`)
+        Helper.sendResponse(res, HttpStatus.OK, "", `${txtAction}`)
       )
       .catch((error) => console.error.bind(console, `Error ${error}`));
   }
@@ -86,7 +92,7 @@ class ClientController {
 
     ClientService.disable(_id)
       .then(() =>
-        Helper.sendResponse(res, HttpStatus.OK, "Client successfully deleted")
+        Helper.sendResponse(res, HttpStatus.OK, "", "Client successfully deleted")
       )
       .catch((error) => console.error.bind(console, `Error ${error}`));
   }
@@ -96,7 +102,7 @@ class ClientController {
 
     ClientService.delete(_id)
       .then(() =>
-        Helper.sendResponse(res, HttpStatus.OK, "Client successfully deleted")
+        Helper.sendResponse(res, HttpStatus.OK, "", "Client successfully deleted")
       )
       .catch((error) => console.error.bind(console, `Error ${error}`));
   }

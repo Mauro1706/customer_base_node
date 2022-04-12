@@ -1,6 +1,6 @@
 class Helper {
-  sendResponse = function (res, statusCode, data) {
-    res.status(statusCode).json({ result: data, msg : res.msg ?? null});
+  sendResponse = function (res, statusCode, data, msg = "", utils = {}) {
+    res.status(statusCode).json({ result: data, msg : msg, utils: utils });
   };
 }
 
