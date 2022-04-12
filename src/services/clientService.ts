@@ -10,11 +10,11 @@ class ClientService {
 
     getBy(contractStatus, page, perPage){
         if (!contractStatus) {
-            return ClientRepository.find({})
+            return ClientRepository.find({'active': true})
                 .skip((page -1) * perPage)
                 .limit(perPage);
         }
-        return ClientRepository.find({ 'contractStatus' : new RegExp('.*' + contractStatus + '*.', 'i') })
+        return ClientRepository.find({ 'active': true, 'contractStatus' : new RegExp('.*' + contractStatus + '*.', 'i') })
             .skip((page -1) * perPage)
             .limit(perPage);
     }
