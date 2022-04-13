@@ -1,7 +1,7 @@
 import * as mongoose from "mongoose";
 
 class Database {
-  private DB_URL = "mongodb://localhost:27017/dbClient";
+  private DB_URL = "mongodb://link-db/dbClient";
 
   createConnection() {
     mongoose.connect(this.DB_URL)
