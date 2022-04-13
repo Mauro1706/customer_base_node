@@ -43,10 +43,11 @@ git clone https://github.com/Mauro1706/customer_base_node.git
 cd customer_base_node/
 ```
 
-2\. Execute o seguinte comando na raiz do projeto: (Obs.: pode gerar alguns erros, que seram corrigidos apos build da imagem docker)
+2\. Execute o seguintes comandos na raiz do projeto
 
 ```
 npm rum compile
+npm install
 ```
 
 3\. Instale a imagem docker com o comando:
