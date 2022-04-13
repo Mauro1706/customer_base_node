@@ -43,20 +43,19 @@ git clone https://github.com/Mauro1706/customer_base_node.git
 cd customer_base_node/
 ```
 
-3\.Instale a imagem docker com o comando:
+2\.Instale a imagem docker com o comando:
 
 ```
 docker build -t maurowcosta/api-ts .
 ```
 
-4\. Faça o build dos containers \, o container **api_dev** utilizara a porta 5000 e o container **link-db** utilizara a porta 27017, certifique-se que essas portas estejam livres antes de continuar. Se seu usuário não estiver incluido no grupo de permissões do **docker e docker-compose**  será necessário executar os comandos como administrador (sudo)
+2\. Faça o build dos containers \, o container **api_dev** utilizara a porta 5000 e o container **link-db** utilizara a porta 27017, certifique-se que essas portas estejam livres antes de continuar. Se seu usuário não estiver incluido no grupo de permissões do **docker e docker-compose**  será necessário executar os comandos como administrador (sudo)
 
 ```
 docker-compose up -d
 ```
 
-5\. Agora você pode acessar aplicação em localhost:5000 ou [clique aqui!](http://localhost:5000)
-
+4\. Agora você pode acessar aplicação em localhost:5000 ou [clique aqui!](http://localhost:5000)
 
 ## DUVIDAS E CONTATOS
 - **[Whatsapp - Mauro Wendel Rodrigues Costa ](https://api.whatsapp.com/send?phone=5561983486393)**
