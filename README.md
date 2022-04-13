@@ -46,8 +46,8 @@ cd customer_base_node/
 2\. Execute o seguintes comandos na raiz do projeto
 
 ```
-npm rum compile
 npm install
+npm rum compile
 ```
 
 3\. Instale a imagem docker com o comando:
