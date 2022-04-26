@@ -66,6 +66,6 @@ docker-compose up -d
 
 ## DUVIDAS E CONTATOS
 - **[Whatsapp - Mauro Costa ](https://api.whatsapp.com/send?phone=5561996034166)**
-- **[Instagram - Mauro Costa ](https://www.instagram.com/maurocosta.wendel/)**
-- **[Linkedin - Mauro Costa ](https://www.linkedin.com/in/mauro-costa-940aa757/)**
+- **[Instagram - maurocosta.wendel ](https://www.instagram.com/maurocosta.wendel/)**
+- **[Linkedin - mauro-costa-940aa757 ](https://www.linkedin.com/in/mauro-costa-940aa757/)**
 - **[Repo: GITHUB - Mauro1706 ](https://github.com/Mauro1706)**
