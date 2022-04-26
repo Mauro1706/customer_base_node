@@ -65,5 +65,7 @@ docker-compose up -d
 5. Agora você pode acessar aplicação em localhost:5000 ou [clique aqui!](http://localhost:5000)
 
 ## DUVIDAS E CONTATOS
-- **[Whatsapp - Mauro Wendel Rodrigues Costa ](https://api.whatsapp.com/send?phone=5561996034166)**
+- **[Whatsapp - Mauro Costa ](https://api.whatsapp.com/send?phone=5561996034166)**
+- **[Instagram - Mauro Costa ](https://www.instagram.com/maurocosta.wendel/)**
+- **[Linkedin - Mauro Costa ](https://www.linkedin.com/in/mauro-costa-940aa757/)**
 - **[Repo: GITHUB - Mauro1706 ](https://github.com/Mauro1706)**
